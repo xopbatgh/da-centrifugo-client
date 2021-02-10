@@ -75,6 +75,13 @@ class DaClient {
 
         });
 
+        component.socket.on('close', function close() {
+
+            component.setError({
+                error: 'socket close',
+            });
+
+        });
 
         component.socket.on('message', function(data, flags) {
 

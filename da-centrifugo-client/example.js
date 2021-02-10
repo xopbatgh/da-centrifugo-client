@@ -53,7 +53,7 @@ server.listen(port, hostname, function() {
 
     });
 
-    // on any new message from DA Centrifugo received
+    // on donation message received only
     daClientItem.onNewDonationMessage(function(client, message){
 
         console.log('Donation from: ' + client.user_id);
